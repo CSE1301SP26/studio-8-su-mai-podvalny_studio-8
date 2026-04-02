@@ -21,7 +21,9 @@ public class SelectAllQuestion extends MultipleChoiceQuestion {
 	 * @param String givenAnswer to check for points
 	 */
 	public int checkAnswer(String givenAnswer) {
+		String [] choices = super.getChoices();
 		int totalPoints = choices.length - (findMissingCorrectAnswers(givenAnswer) + findIncorrectGivenAnswers(givenAnswer));
+		return totalPoints;
 	}
 
 	/**
